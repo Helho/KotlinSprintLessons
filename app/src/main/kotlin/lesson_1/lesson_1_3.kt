@@ -7,8 +7,8 @@ fun main() {
     var minute: String = "07"
 
     println("The year of Yuri Gagarin's flight into spase - $year!")
-//println(hour)
-//println(minute)
+    println(hour)
+    println(minute)
 
     hour = "10"
     minute = "55"
