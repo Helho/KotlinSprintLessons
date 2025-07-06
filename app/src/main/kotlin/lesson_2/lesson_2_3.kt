@@ -10,7 +10,9 @@ fun main() {
     val arrivalHour = (totalMinutes / MINUTES_IN_HOUR) % HOURS_IN_DAY
     val arrivalMinute = totalMinutes % MINUTES_IN_HOUR
 
-    println("Поезд прибывает в $arrivalHour:${"%02d".format(arrivalMinute)}")
+    val formattedTime = "%02d:%02d".format(arrivalHour, arrivalMinute)
+
+    println("Поезд прибывает в $formattedTime")
 
 }
 
