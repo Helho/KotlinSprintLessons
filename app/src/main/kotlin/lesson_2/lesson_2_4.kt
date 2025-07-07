@@ -14,4 +14,4 @@ fun main() {
 
 }
 
-const val PERCENT_FACTOR = 100
+const val PERCENT_FACTOR: Int = 100

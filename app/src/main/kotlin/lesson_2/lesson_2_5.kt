@@ -15,5 +15,3 @@ fun main() {
     println("Сумма вклада через $years лет: %.3f".format(Locale.US, finalAmount))
 
 }
-
-const val PERCENT_FACTOR = 100
