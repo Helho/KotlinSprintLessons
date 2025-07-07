@@ -6,10 +6,12 @@ fun main() {
     val ironWithoutBuff: Int = 11
     val buffPercent: Int = 20
 
-    val crystalBonus: Int = (crystalWithoutBuff * buffPercent) / 100
-    val ironBonus: Int = (ironWithoutBuff * buffPercent) / 100
+    val crystalBonus: Int = (crystalWithoutBuff * buffPercent) / PERCENT_FACTOR
+    val ironBonus: Int = (ironWithoutBuff * buffPercent) / PERCENT_FACTOR
 
     println("Бонусные кристаллы: $crystalBonus")
     println("Бонусное железо: $ironBonus")
 
 }
+
+const val PERCENT_FACTOR = 100
