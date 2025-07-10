@@ -12,14 +12,18 @@ fun main() {
     val isWeatherFavorable = readln().toBoolean()
 
     val canSail = (!isDamaged &&
-            crewCount in 55..70 &&
-            foodSupply > 50 &&
-            true) ||
+            crewCount in MIN_CREW..MAX_CREW &&
+            foodSupply > MIN_FOOD_NO_DAMAGE) ||
             (isDamaged &&
-                    crewCount == 70 &&
+                    crewCount == REQUIRED_CREW_WITH_DAMAGE &&
                     isWeatherFavorable &&
-                    foodSupply >= 50)
-
-    println("Корабль может отправиться в плавание: $canSail")
+                    foodSupply >= MIN_FOOD_WITH_DAMAGE)
+            println("Корабль может отправиться в плавание: $canSail")
 
 }
+
+const val MIN_CREW = 55
+const val MAX_CREW = 70
+const val MIN_FOOD_NO_DAMAGE = 50
+const val MIN_FOOD_WITH_DAMAGE = 50
+const val REQUIRED_CREW_WITH_DAMAGE = 70
