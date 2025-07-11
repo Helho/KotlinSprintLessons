@@ -13,9 +13,9 @@ fun main() {
     val bmi = weight / (heightM * heightM)
 
     val category = when {
-        bmi < 18.5 -> "Недостаточная масса тела"
-        bmi < 25 -> "Нормальная масса тела"
-        bmi < 30 -> "Избыточная масса тела"
+        bmi < UNDERWEIGHT_THRESHOLD -> "Недостаточная масса тела"
+        bmi < NORMAL_WEIGHT_THRESHOLD -> "Нормальная масса тела"
+        bmi < OVERWEIGHT_THRESHOLD -> "Избыточная масса тела"
         else -> "Ожирение"
     }
 
@@ -25,4 +25,7 @@ fun main() {
 
 }
 
+const val UNDERWEIGHT_THRESHOLD = 18.5
+const val NORMAL_WEIGHT_THRESHOLD = 25.0
+const val OVERWEIGHT_THRESHOLD = 30.0
 const val CENTIMETERS_IN_METERS = 100
