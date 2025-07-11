@@ -1,9 +1,11 @@
 package lesson_5
 
+import kotlin.random.Random
+
 fun main() {
 
-    val secretNumber1 = 1
-    val secretNumber2 = 40
+    val secretNumber1 = Random.nextInt(0, 43)
+    val secretNumber2 = Random.nextInt(0, 43)
 
     println("Угадайте два числа от 0 до 42 и выиграйте приз!")
     print("Введите первое число: ")
